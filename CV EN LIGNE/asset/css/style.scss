@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+body{  
+    h1{
+        text-align: center;
+        font-size: 90px;
+        -webkit-text-stroke: 2px #07005C;
+        color:white;
+        cursor: pointer;
+    }
+    header{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            .lien-header{
+                font-size: 50px;
+                line-height: 1.5em;
+                color: #07005C
+            }
+        }
+        
+        img{
+            width: 500px;
+            height: 500px;
+            object-fit: contain;
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+    h2{
+        font-size: 40px;
+        text-align: center;
+        font-style: italic;
+        font-weight: normal;
+    }
+    #animation-container {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        animation: slideIn 1s ease forwards;
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+    
+        p {
+            font-size: 30px; 
+        }
+    
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(80%);
+                visibility: hidden;
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+                visibility: visible;
+            }
+        }
+        @keyframes skillIn {
+            from {
+                opacity: 0;
+                transform: translateY(80%);
+                visibility: hidden;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0%, 0%);
+                visibility: visible;
+            }
+        }  
+    }
+    .animation-hidden {
+        display: none;
+    }
+    .skills {
+        display: none;
+        justify-content: space-evenly;
+    
+        .savoir-etre {
+            background-color: #07005C;
+            padding: 30px;
+            border-radius: 64px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            animation: skillIn 1s ease forwards;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+            h3{
+                text-align: center;
+                font-size: 30px;
+                color: white;
+            }
+            p{
+                color: white;
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 1.5em;
+            }
+        }
+    
+        .savoir-faire {
+            background-color: #07005C;
+            padding: 30px;
+            border-radius: 64px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            animation: skillIn 1s ease forwards;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+            h3{
+                color: white;
+                text-align: center;
+                font-size: 30px;
+            }
+            p{
+                color: white;
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 1.5em;
+            } 
+        }
+    }
+}
